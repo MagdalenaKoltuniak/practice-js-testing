@@ -16,4 +16,10 @@ describe('randomNumber', () => {
 	it('throws an error if min is greater than max', () => {
 		expect(() => randomNumber(5, 3)).toThrow();
 	});
+
+	it('returns a number within the given range', () => {
+		const result = randomNumber(5, 15);
+		expect(result).toBeGreaterThanOrEqual(5);
+		expect(result).toBeLessThanOrEqual(15);
+	});
 });
