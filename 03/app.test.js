@@ -12,4 +12,8 @@ describe('randomNumber', () => {
 	it('throws an error if max is not a number', () => {
 		expect(() => randomNumber(2, 'y')).toThrow();
 	});
+
+	it('throws an error if min is greater than max', () => {
+		expect(() => randomNumber(5, 3)).toThrow();
+	});
 });
